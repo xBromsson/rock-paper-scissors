@@ -1,1 +1,31 @@
 /* Stylesheet */
+
+
+.container{
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    border: solid;
+    border-width: 2px;
+    border-color: red;
+    padding: 0px;
+}
+
+.item{
+
+}
+
+h1{
+    text-align: center;
+}
+
+button{
+    border: none;
+    padding: 30px 50px 30px 50px;
+    border-radius: 5px;
+    background-color: beige;
+    color: black;
+    /*box-shadow: inset;*/
+}

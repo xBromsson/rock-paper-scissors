@@ -6,10 +6,15 @@ Javascript
 -both the user's choice and the computer's choice will be compared to determine a winner
 -the determined winner will be output to the screen
 
+-create a user ui
+-create three buttons to replace the user types rock, paper, and scissors
+-create a score keeper, first person to 5 points wins. 
+-display the running score
+
 
 */
 
-//defining all variables used later in the code
+//defining all variables used later in the code TEST
 let userPlay = "";
 let computerPlay = "";
 let userWon = "";
@@ -17,6 +22,9 @@ let computerWon = "";
 let noWinner = "";
 let run = true;
 const choice = ["rock","paper","scissors"];
+
+const btns = document.querySelectorAll('button');
+
 
 //this function populates the alert message with the updated variables
 function populateResults(){
@@ -53,6 +61,7 @@ function determineWinner(){
         alert(userWon)
     }
 }
+
 
 //the game loop
 while (run === true){
