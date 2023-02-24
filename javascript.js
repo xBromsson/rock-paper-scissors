@@ -20,13 +20,36 @@ let computerPlay = "";
 let userWon = "";
 let computerWon = "";
 let noWinner = "";
-let run = true;
+let userScore = parseInt(document.querySelector('#user-score').textContent);
+let computerScore = parseInt(document.querySelector('#computer-score').textContent);
 const choice = ["rock","paper","scissors"];
-
-const btns = document.querySelectorAll('button');
 
 
 //this function populates the alert message with the updated variables
+function updateScores(){
+    if (userPlay === computerPlay){
+        return;
+    } else if (userPlay === "rock" && computerPlay === "paper"){
+        computerScore += 1
+        document.querySelector('#computer-score').textContent = computerScore;
+    } else if (userPlay === "rock" && computerPlay === "scissors"){
+        userScore += 1
+        document.querySelector('#user-score').textContent = userScore;
+    } else if (userPlay === "paper" && computerPlay === "rock"){
+        userScore += 1
+        document.querySelector('#user-score').textContent = userScore;
+    } else if (userPlay === "paper" && computerPlay === "scissors"){
+        computerScore += 1
+        document.querySelector('#computer-score').textContent = computerScore;
+    } else if (userPlay === "scissors" && computerPlay === "rock"){
+        computerScore += 1
+        document.querySelector('#computer-score').textContent = computerScore;
+    } else if (userPlay === "scissors" && computerPlay === "paper"){
+        userScore += 1
+        document.querySelector('#user-score').textContent = userScore;
+    }   
+}
+
 function populateResults(){
     userWon = "You Picked: "+ userPlay.toUpperCase() + "\nComputer Picked: "+ computerPlay.toUpperCase() + "\nYou Won! " + userPlay.toUpperCase() + " beats " +  computerPlay.toUpperCase()+"!";
     computerWon = "You Picked: "+ userPlay.toUpperCase() + "\nComputer Picked: "+ computerPlay.toUpperCase() + "\nYou Lost! " + computerPlay.toUpperCase() + " beats " + userPlay.toUpperCase()+"!";
@@ -62,17 +85,41 @@ function determineWinner(){
     }
 }
 
+function getID(){
+    userPlay = this.id
+    computerPlay = choice[computerChoice()];
+    populateResults();
+    updateScores();
+    determineWinner();
+}
+
+const rockButton = document.querySelector("#rock")
+const paperButton = document.querySelector("#paper")
+const scissorsButton = document.querySelector("#scissors")
+
+rockButton.addEventListener('click', getID)
+paperButton.addEventListener('click', getID)
+scissorsButton.addEventListener('click', getID)
+
+console.log(userScore);
+console.log(computerScore)
+
 
 //the game loop
-while (run === true){
-    userPlay = window.prompt("What do you play... Rock, Paper, or Scissors?").toLowerCase();
-    computerPlay = choice[computerChoice()];
-    console.log(userPlay);
-    console.log(computerPlay);
-    populateResults();
-    determineWinner();
 
+/*
+while (run === true){
+ 
+    if (state === "computer"){
+        computerPlay = choice[computerChoice()];
+        console.log(userPlay);
+        console.log(computerPlay);
+        populateResults();
+        determineWinner();
+        state = "listen"
+    }
 }
+*/
 
 
 

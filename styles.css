@@ -2,14 +2,13 @@
 
 
 .container{
-    height: 400px;
+    height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 25px;
-    border: solid;
+    border: none;
     border-width: 2px;
-    border-color: red;
     padding: 0px;
 }
 
@@ -17,8 +16,42 @@
 
 }
 
+.container-score-header{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    border: none;
+    border-width: 2px;
+    padding: 0px;
+}
+
+.container-score{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 75px;
+    border: none;
+    border-width: 2px;
+    padding: 0px;
+}
+
+div.score{
+    justify-content: center;
+    text-align: center;
+    font-size: 50px;
+}
+
 h1{
     text-align: center;
+    font-size: 60px;
+}
+
+h2{
+    color: black;
+    font-size: 20px;
 }
 
 button{
