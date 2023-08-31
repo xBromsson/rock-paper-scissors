@@ -1,0 +1,28 @@
+{
+  "name": "rock-paper-scissors",
+  "version": "1.0.0",
+  "description": "A simple game of rock paper scissors against the computer in your browser.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xBromsson/rock-paper-scissors.git"
+  },
+  "keywords": [
+    "rock-paper-scissors",
+    "game",
+    "JavaScript",
+    "game"
+  ],
+  "author": "Marvin Brown",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/xBromsson/rock-paper-scissors/issues"
+  },
+  "homepage": "https://github.com/xBromsson/rock-paper-scissors#readme",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
