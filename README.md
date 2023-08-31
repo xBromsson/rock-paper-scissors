@@ -1,6 +1,6 @@
 # ✊ Rock, ✋ Paper, ✌️ Scissors!
 
-![Static Badge](https://img.shields.io/badge/status%3A-stable-green%)
+![Static Badge](https://img.shields.io/badge/status%3A-stable-green)
 
 ## 📖 About
 
